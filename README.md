@@ -1,23 +1,42 @@
-# ad-vs-psa-AB-Testing
-This project evaluates the effectiveness of sales-driven advertisements (Ads) versus Public Service Announcements (PSAs) in driving user conversions. Using A/B testing and predictive modeling, we measure causal impact and build a model to predict conversion likelihood.
+# Ad vs PSA A/B Testing & Conversion Prediction
+This project analyzes a randomized marketing experiment comparing **Ads** vs **Public Service Announcements (PSAs)** to determine which campaign type leads to higher conversions. It also builds a predictive model to estimate conversion likelihood using campaign exposure and timing features.
 
-A/B Test Results
+---
 
-Dataset of 588,101 users from a randomized marketing experiment
-Ad conversion rate: 2.55%
-PSA conversion rate: 1.79%
-Ads achieved ~42% higher conversion than PSAs
-Statistical testing confirmed the difference was significant (p < 0.001)
+## Objective
 
-Causal Impact
+- Compare conversion rates between Ad and PSA campaigns  
+- Validate results using statistical hypothesis testing  
+- Estimate Average Treatment Effect (ATE)  
+- Train and evaluate a logistic regression conversion model  
+- Deliver actionable insights for marketing decisions
 
-Estimated Average Treatment Effect (ATE) of PSA vs Ad ≈ –0.77 percentage points
-95% confidence interval fully below zero → PSAs reduce conversions relative to Ads
+---
 
-Predictive Modeling
+## Key Findings
 
-Built a logistic regression model using:
-Campaign type
-Number of ads seen
-Peak day and hour of exposure
-Model performance: ROC-AUC = 0.854, indicating strong predictive power
+###  A/B Test Results
+- Dataset size: **588,101 users**  
+- **Ad conversion rate:** 2.55%  
+- **PSA conversion rate:** 1.79% (~42% higher for Ads)  
+- Statistical testing confirmed significance (**p < 0.001**)  
+- ATE estimate (~–0.77 percentage points) with 95% CI fully below zero
+
+### Predictive Modeling
+- Built a **logistic regression model** using:
+  - Campaign type  
+  - Number of ads seen  
+  - Peak day/hour of exposure  
+- Model achieved **ROC-AUC = 0.854**, indicating strong performance
+
+---
+
+## 🛠 Tech Stack
+
+- **Python** – Data processing & modeling  
+- **Pandas / NumPy** – Data manipulation  
+- **Scikit-learn** – Modeling & evaluation  
+- **Matplotlib / Seaborn** – Visualizations  
+- **Jupyter Notebook** – Analysis environment
+
+---
